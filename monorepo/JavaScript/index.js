@@ -1,9 +1,6 @@
 const form = document.querySelector("form");
 
-const cbxInternship = document.getElementById("Internship");
-const cbxPabau = document.getElementById("Pabau");
-const cbxEmployment = document.getElementById("Employment");
-const cbxCareer = document.getElementById("Career");
+const containers = Array.from(document.querySelectorAll(".containerArray"));
 
 const btnShuffle = document.getElementById("shuffleBtn");
 const btnChange = document.getElementById("changeBtn");
@@ -18,7 +15,19 @@ btnShow.onclick = printValues;
 btnReload.onclick = () => window.location.reload();
 
 function shuffleValues(){
+    containers.forEach(container => form.removeChild(container));
 
+    for (let i = 0; i < containers.length - 1; i++) {
+        const index1 = Math.floor(Math.random() * (containers.length - 1));
+        const index2 = Math.floor(Math.random() * (containers.length - 1));
+
+        if (index1 !== index2) {
+            let temp = containers[index1];
+            containers[index1] = containers[index2];
+            containers[index2] = temp;
+        }
+    }
+    containers.forEach(container => form.appendChild(container));
 }
 
 function changeValues(){
