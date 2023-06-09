@@ -3,8 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Pabau Task</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 20px 0 0 20px;
+            background-color: #2f2f2f;
+            color: white;
+        }
+
+        button {
+            margin-right: 5px;
+        }
+    </style>
 </head>
 <body>
+<form action="">
+        <input type="checkbox" id="Internship" name="Internship" value="Internship"/>
+        <label for="Internship">Internship</label><br>
+        <input type="checkbox" id="Pabau" name="Pabau" value="Pabau"/>
+        <label for="Pabau">Pabau</label><br>
+        <input type="checkbox" id="Employment" name="Employment" value="Employment"/>
+        <label for="Employment">Employment</label><br>
+        <input type="checkbox" id="Career" name="Career" value="Career"/>
+        <label for="Career">Career</label><br>
+        <br>
+        <button type="button" id="shuffleBtn" class="btn-danger">Shuffle Values</button>
+        <button type="button" id="changeBtn" class="btn-danger">Change Values</button>
+        <button type="button" id="showBtn" class="btn-danger">Show selected values</button>
+        <button type="button" id="reloadBtn" class="btn-danger">Reload</button>
+</form>
+
+<h3 id="display"></h3>
+
+<script src="index.js"></script>
 
 </body>
 </html>
