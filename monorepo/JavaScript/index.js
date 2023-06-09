@@ -28,12 +28,33 @@ function shuffleValues(){
         }
     }
     containers.forEach(container => form.appendChild(container));
+
+    if (display.value !== '') {
+        printValues();
+    }
 }
 
 function changeValues(){
+    const values = ["Anti Wrinkle Treatment", "Dermal Fillers", "Secret RF", "HArmonyCA"];
 
+    for (let i = 0; i < containers.length - 1; i++) {
+        containers[i].children[0].value = values[i];
+        containers[i].children[1].textContent = values[i]; // this is extra, I know it wasn't required
+    }
+
+    if (display.value !== '') {
+        printValues();
+    }
 }
 
 function printValues(){
+    let showText = '';
 
+    for (let i = 0; i < containers.length - 1; i++) {
+        if (containers[i].children[0].checked === true) {
+            showText += containers[i].children[0].value + ", ";
+        }
+    }
+
+    display.textContent = showText.slice(0, -2);
 }
