@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f8f8f8;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+header {
+    height: 80px;
+    width: 100vw;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 20px;
+}
+
+.height-container {
+    min-height: 80vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 15px;
+}
+
+.container-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.body-div {
+    background-color: white;
+    width: 600px;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.body-div-option {
+    background-color: white;
+    width: 600px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.body-div-option button {
+    height: 30px;
+    width: 100px;
+    margin-top: 10px;
+    border: 2px #03b3e1 solid;
+    border-radius: 5px;
+    background-color: #61dafb;
+}
+
+.phone-number {
+    text-decoration: none;
+    color: #03b3e1;
+}
+
+.body-div-2 {
+    background-color: white;
+    width: 600px;
+    height: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: white;
+    height: auto;
+    width: 100vw;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+footer img {
+    display: flex;
+    height: 25px;
+    width: 25px;
+}
+
+.options-div {
+    margin-top: 50px;
+}
+
+.individualOption-div {
+    width: 500px;
+    margin-left: 50px;
+    height: 53px;
+    margin-bottom: 20px;
+    border: #d2d2d2 2px solid;
+    border-radius: 5px;
+    display: flex;
+}
+
+.individualOption-div img {
+    margin-left: 5px;
+    width: 50px;
+    height: 50px;
+    margin-top: 2px;
+    border-radius: 2px;
+}
+
+.text-div {
+    width: 400px;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.btn-class {
+    border: none;
+    background-color: transparent;
+}
