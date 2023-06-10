@@ -1,29 +1,41 @@
-import pabauLogo from "../images/pabauLogo.png";
+import AntiWrinkleTreatment from "../images/AntiWrinkleTreatment.png"
+import DermalFillers from "../images/DermalFillers.jpg"
+import SecretRF from "../images/secretRF.png"
+import HArmonyCA from "../images/HArmonyCA.jpg"
+import Profhilo from "../images/Profhilo.png"
+import Facials from "../images/Facials.jpg"
 import IndividualOption from "./IndividualOption";
 import Header from "./Header";
-import Footer from "./Footer";
+import {useContext, useEffect} from "react";
+import Context from "../utils/Context";
 
 export default function LandingPage() {
 
     const optionsArray = [
-        {img: pabauLogo, text: "Dermal Fillers", location: "/"},
-        {img: pabauLogo, text: "Dermal Fillers", location: "/"},
-        {img: pabauLogo, text: "Dermal Fillers", location: "/"},
-        {img: pabauLogo, text: "Dermal Fillers", location: "/"},
-        {img: pabauLogo, text: "Dermal Fillers", location: "/"},
-        {img: pabauLogo, text: "Dermal Fillers", location: "/"}
+        {img: AntiWrinkleTreatment, text: "Anti Wrinkle Treatment"},
+        {img: DermalFillers, text: "Dermal Fillers"},
+        {img: SecretRF, text: "Secret RF"},
+        {img: HArmonyCA, text: "HArmonyCA"},
+        {img: Profhilo, text: "Profhilo"},
+        {img: Facials, text: "Facials"}
     ];
+
+    const {text, step, update} = useContext(Context);
+
+    useEffect(()=>{
+        update({text: "Choose Service", step: 1});
+    }, []);
 
     return (
         <>
-            <Header text={"Choose Service"} step={1}/>
+            <Header text={text} step={step}/>
             <body>
             <div className={"height-container"}>
                 <div className={"container"}>
                     <div className={"body-div"}>
                         <div className={"options-div"}>
                             {optionsArray.map(option =>
-                                <IndividualOption img={option.img} text={option.text} location={option.location}/>)}
+                                <IndividualOption img={option.img} text={option.text}/>)}
                         </div>
                     </div>
                 </div>
@@ -36,7 +48,6 @@ export default function LandingPage() {
                 </div>
             </div>
             </body>
-            <Footer/>
         </>
     );
 }
